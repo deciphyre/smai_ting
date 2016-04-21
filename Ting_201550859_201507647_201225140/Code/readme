@@ -1,0 +1,23 @@
+Employing Neural_network
+
+Program takes the UKWaC(xml format) raw file and converts it into a required format (data: sensentce seperated by linefeed, pos: pos tags of sentence seperated by linefeed ):
+python one.py file > data,pos
+
+Program to prepare word2vec model (word2vec - vector representations of words present in "data" file) based on "data" file:
+python trainw2vec.py data data.model
+
+Split data,pos into : train_s,train_p,test_s and test_p (_s- for sentence files and _p - for pos)
+
+To create one hot vector for all pos tags
+python tag_vec.py train_p > train_pos_vector
+python tag_vec.py test_p > test_pos_vector
+
+Get w2v representation of trigrams
+python makev.py train_s > train_wv
+python makev.py test_s > test_wv
+
+Program to train neural network to get prediction for test_wv which will be saved in predictionsN.csv
+python logcode.py
+
+Program to evaluate for further analysis in form of confusion matrix
+python postag_eval.py predictionsN.csv test_pos_vector  
