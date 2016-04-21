@@ -132,10 +132,3 @@ for x,y in zip(op,ref):
 		count+=1
 display_table(create_conf_matrix(predicted,expected,57),57,arr)
 error_matrix(create_conf_matrix(predicted,expected,57),57,arr)
-#print create_conf_matrix(predicted,expected,57)
-#print count
-#print len(op)
-#v= float(count)/float(len(op))
-#print v*100
-#exit()
-#print op,ref

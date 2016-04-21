@@ -5,3 +5,7 @@ Building POS-Tagger for English
 	Major Tools used: (coded in python)
 		-word2vec module
 		-tensorflow (for neural network)
+Github - Link
+https://github.com/deciphyre/smai_ting.git
+Youtube Video - Link
+https://youtu.be/oin34K23V6k
